@@ -1,0 +1,58 @@
+{
+  "name": "rest-job-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "build/app.js",
+  "scripts": {
+    "dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --ignore \"src/**/*.spec.ts\" --exec \"NODE_ENV=development ts-node --project tsconfig.json src/app.ts\"",
+    "build": "tsc",
+    "start": "NODE_ENV=production node build/app.js",
+    "lint": "eslint src/**/*.ts",
+    "pretty": "prettier src/**/*.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "@koa/router": "^10.1.1",
+    "dotenv": "^14.3.2",
+    "firebase-admin": "^10.0.2",
+    "http-status-codes": "^2.2.0",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "module-alias": "^2.2.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.15.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.4",
+    "@types/koa-bodyparser": "^4.3.5",
+    "@types/koa__cors": "^3.1.1",
+    "@types/koa__router": "^8.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.5.5"
+  },
+  "_moduleAliases": {
+    "@db": "build/db",
+    "@errors": "build/errors",
+    "@routes": "build/routes",
+    "@controllers": "build/controllers",
+    "@models": "build/models",
+    "@utils": "build/utils",
+    "@services": "build/services",
+    "@middlewares": "build/middlewares"
+  }
+}
